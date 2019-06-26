@@ -7,7 +7,7 @@ module Imgurapi
     JPG2 = Regexp.new("^\xff\xd8\xff\xe1(.*){2}Exif".force_encoding('binary'))
 
     def initialize(path)
-      @path = path
+      @path = path.path
     end
 
     def mime_type

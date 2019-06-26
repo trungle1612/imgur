@@ -16,7 +16,8 @@ module Imgurapi
         image = if file_type.url?
                   local_file
                 else
-                  raise 'File must be an image' unless file_type.image?
+                  # TODO: this use for personal reson
+                  # raise 'File must be an image' unless file_type.image? 
 
                   file = local_file.respond_to?(:read) ? local_file : File.open(local_file, 'rb')
 
